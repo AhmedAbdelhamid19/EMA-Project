@@ -23,8 +23,6 @@ namespace EMA_Project
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseAuthorization();
 
 

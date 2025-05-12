@@ -1,0 +1,33 @@
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\appsettings.Development.json
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\appsettings.json
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\EMA Project.exe
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\EMA Project.deps.json
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\EMA Project.runtimeconfig.json
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\EMA Project.dll
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\EMA Project.pdb
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\Microsoft.OpenApi.dll
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\EMA-Project\EMA Project\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.csproj.AssemblyReference.cache
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.GeneratedMSBuildEditorConfig.editorconfig
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.AssemblyInfoInputs.cache
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.AssemblyInfo.cs
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.csproj.CoreCompileInputs.cache
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.MvcApplicationPartsAssemblyInfo.cs
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.MvcApplicationPartsAssemblyInfo.cache
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.sourcelink.json
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\staticwebassets.build.json
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\staticwebassets.development.json
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\staticwebassets\msbuild.EMA Project.Microsoft.AspNetCore.StaticWebAssets.props
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\staticwebassets\msbuild.build.EMA Project.props
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EMA Project.props
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EMA Project.props
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\staticwebassets.pack.json
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\scopedcss\bundle\EMA Project.styles.css
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Proj.C2786640.Up2Date
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.dll
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\refint\EMA Project.dll
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.pdb
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\EMA Project.genruntimeconfig.cache
+E:\EMA-Project\EMA Project\obj\Debug\net8.0\ref\EMA Project.dll

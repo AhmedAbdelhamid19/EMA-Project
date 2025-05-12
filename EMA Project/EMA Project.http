@@ -1,4 +1,4 @@
-@EMA_Project_HostAddress = http://localhost:5183
+@EMA_Project_HostAddress = http://localhost:5042
 
 GET {{EMA_Project_HostAddress}}/weatherforecast/
 Accept: application/json
