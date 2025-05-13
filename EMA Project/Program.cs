@@ -13,6 +13,16 @@ namespace EMA_Project
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("EMA",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
 
             var app = builder.Build();
 
@@ -23,6 +33,7 @@ namespace EMA_Project
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("EMA");
             app.UseAuthorization();
 
 

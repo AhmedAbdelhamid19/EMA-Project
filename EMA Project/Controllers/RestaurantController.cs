@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EMA_Project.Models;
 using Microsoft.AspNetCore.Mvc;
-using EMA_Project.Models;
 
 namespace EMA_Project.Controllers
 {
@@ -8,7 +7,7 @@ namespace EMA_Project.Controllers
     [ApiController]
     public class RestaurantController : ControllerBase
     {
-        [HttpPost("Restaurant/Add")]
+        [HttpPost("Add")]
         public IActionResult AddRestaurant([FromBody] Restaurant restaurant)
         {
             restaurant.Id = DbRepository.Restaurants.Count + 1;
@@ -38,6 +37,11 @@ namespace EMA_Project.Controllers
         }
 
 
+        [HttpGet("check/{password}/{email}")]
+        public IActionResult check([FromRoute]LoginModel login)
+        {
+            return Ok("Ok");
+        }
 
         [HttpGet("Products/{id}")]
         public IActionResult GetProductsOfRestaurant(int id)
@@ -53,7 +57,7 @@ namespace EMA_Project.Controllers
 
 
 
-        [HttpGet("Restaurant/AddProduct/{RestaurantId}/{ProductId}")]
+        [HttpGet("AddProduct/{RestaurantId}/{ProductId}")]
         public IActionResult AddProductToRestaurant(int ProductId, int RestaurantId)
         {
             Product? Dbproduct = DbRepository.Products.FirstOrDefault(p => p.Id == ProductId);

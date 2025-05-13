@@ -59,6 +59,22 @@
   },
   {
     "ContainingType": "EMA_Project.Controllers.ProductController",
+    "Method": "AddProduct",
+    "RelativePath": "api/Product/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "EMA_Project.Models.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.ProductController",
     "Method": "GetProducts",
     "RelativePath": "api/Product/GetAll",
     "HttpMethod": "GET",
@@ -85,22 +101,6 @@
   },
   {
     "ContainingType": "EMA_Project.Controllers.ProductController",
-    "Method": "AddProduct",
-    "RelativePath": "api/Product/Product/Add",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "product",
-        "Type": "EMA_Project.Models.Product",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EMA_Project.Controllers.ProductController",
     "Method": "GetRestaurantsOfProduct",
     "RelativePath": "api/Product/Restaurants/{id}",
     "HttpMethod": "GET",
@@ -110,6 +110,64 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.RestaurantController",
+    "Method": "AddRestaurant",
+    "RelativePath": "api/Restaurant/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "restaurant",
+        "Type": "EMA_Project.Models.Restaurant",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.RestaurantController",
+    "Method": "AddProductToRestaurant",
+    "RelativePath": "api/Restaurant/AddProduct/{RestaurantId}/{ProductId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "RestaurantId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.RestaurantController",
+    "Method": "check",
+    "RelativePath": "api/Restaurant/check/{password}/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -151,43 +209,6 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EMA_Project.Controllers.RestaurantController",
-    "Method": "AddRestaurant",
-    "RelativePath": "api/Restaurant/Restaurant/Add",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "restaurant",
-        "Type": "EMA_Project.Models.Restaurant",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EMA_Project.Controllers.RestaurantController",
-    "Method": "AddProductToRestaurant",
-    "RelativePath": "api/Restaurant/Restaurant/AddProduct/{RestaurantId}/{ProductId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ProductId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "RestaurantId",
         "Type": "System.Int32",
         "IsRequired": true
       }

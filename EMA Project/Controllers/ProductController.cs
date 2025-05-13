@@ -8,7 +8,7 @@ namespace EMA_Project.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        [HttpPost("Product/Add")]
+        [HttpPost("Add")]
         public IActionResult AddProduct([FromBody] Product product)
         {
             product.Id = DbRepository.Products.Count + 1;
