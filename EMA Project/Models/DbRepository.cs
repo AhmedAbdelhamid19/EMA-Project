@@ -31,15 +31,10 @@
             Restaurants.Add(new Restaurant { Id = 9, Name = "Etwal" });
             
             Products.Add(new Product { Id = 1, Name = "Roz Blabn", Price = 20.0m}); 
-            Restaurants[4]?.Products?.Add(Products[0]);
             Products.Add(new Product { Id = 2, Name = "Hamburger", Price = 300.0m }); 
-            Restaurants[0]?.Products?.Add(Products[1]);
             Products.Add(new Product { Id = 3, Name = "rice", Price = 10.0m }); 
-            Restaurants[0]?.Products?.Add(Products[2]);
             Products.Add(new Product { Id = 4, Name = "salad", Price = 5.0m }); 
-            Restaurants[0]?.Products?.Add(Products[3]);
             Products.Add(new Product { Id = 5, Name = "Koshari", Price = 5.0m }); 
-            Restaurants[3]?.Products?.Add(Products[4]);
         }
     }
 }

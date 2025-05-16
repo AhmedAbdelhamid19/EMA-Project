@@ -12,6 +12,8 @@ namespace EMA_Project.Models
 
         public bool? Gender { get; set; }
 
+        public string Rule { get; set; } = "User";
+
 
         [Required(ErrorMessage = "Email is required.")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Invalid email format.")]
