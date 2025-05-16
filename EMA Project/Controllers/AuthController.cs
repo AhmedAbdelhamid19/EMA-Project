@@ -68,6 +68,7 @@ namespace EMA_Project.Controllers
                 return Unauthorized("Invalid email or password.");
             }
 
+            DbRepository.CurrentUser = user;
             return Ok($"Welcome back, {user.Name}!");
         }
     }
