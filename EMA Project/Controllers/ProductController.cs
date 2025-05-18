@@ -19,10 +19,23 @@ namespace EMA_Project.Controllers
             return CreatedAtAction("GetProduct", new { id = product.Id }, product);
         }
 
-        [HttpGet("GetProduct/{id}")]
+        [HttpGet("GetProduct/{id:int}")]
         public IActionResult GetProduct(int id)
         {
             Product? product = DbRepository.Products.FirstOrDefault(p => p.Id == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(product);
+        }
+
+        [HttpGet("GetProduct/{name:alpha}")]
+        public IActionResult GetProduct(string name)
+        {
+            Product? product = DbRepository.Products.FirstOrDefault(p => p.Name == name);
 
             if (product == null)
             {
@@ -38,10 +51,22 @@ namespace EMA_Project.Controllers
             return Ok(DbRepository.Products.Select(p => new { p.Id, p.Name }));
         }
 
-        [HttpGet("Restaurants/{id}")]
+        [HttpGet("Restaurants/{id:int}")]
         public IActionResult GetRestaurantsOfProduct(int id)
         {
             Product? product = DbRepository.Products.FirstOrDefault(p => p.Id == id);
+            if (product == null)
+            {
+                return BadRequest("Product not found");
+            }
+
+            return Ok(product.Restaurants);
+        }
+
+        [HttpGet("Restaurants/{name:alpha}")]
+        public IActionResult GetRestaurantsOfProductByName(string name)
+        {
+            Product? product = DbRepository.Products.FirstOrDefault(p => p.Name == name);
             if (product == null)
             {
                 return BadRequest("Product not found");

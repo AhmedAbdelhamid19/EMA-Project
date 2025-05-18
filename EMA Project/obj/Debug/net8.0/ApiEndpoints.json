@@ -101,6 +101,22 @@
   },
   {
     "ContainingType": "EMA_Project.Controllers.ProductController",
+    "Method": "GetProduct",
+    "RelativePath": "api/Product/GetProduct/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.ProductController",
     "Method": "GetRestaurantsOfProduct",
     "RelativePath": "api/Product/Restaurants/{id}",
     "HttpMethod": "GET",
@@ -110,6 +126,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.ProductController",
+    "Method": "GetRestaurantsOfProductByName",
+    "RelativePath": "api/Product/Restaurants/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -201,6 +233,22 @@
   },
   {
     "ContainingType": "EMA_Project.Controllers.RestaurantController",
+    "Method": "GetAction",
+    "RelativePath": "api/Restaurant/GetRestaurant/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.RestaurantController",
     "Method": "GetProductsOfRestaurant",
     "RelativePath": "api/Restaurant/Products/{id}",
     "HttpMethod": "GET",
@@ -210,6 +258,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.RestaurantController",
+    "Method": "GetProductsOfRestaurant",
+    "RelativePath": "api/Restaurant/Products/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
