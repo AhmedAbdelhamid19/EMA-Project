@@ -8,7 +8,7 @@
 
         public static SignUpModel? CurrentUser { get; set; } = null;
 
-        DbRepository()
+        public DbRepository()
         {
             Users.Add(new SignUpModel() {
                 Id = 1,

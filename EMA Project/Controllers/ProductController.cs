@@ -8,6 +8,8 @@ namespace EMA_Project.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        private readonly DbRepository dbRepository = new DbRepository();
+
         [HttpPost("Add")]
         public IActionResult AddProduct([FromBody] Product product)
         {
@@ -17,13 +19,12 @@ namespace EMA_Project.Controllers
             return CreatedAtAction("GetProduct", new { id = product.Id }, product);
         }
 
-
         [HttpGet("GetProduct/{id}")]
         public IActionResult GetProduct(int id)
         {
             Product? product = DbRepository.Products.FirstOrDefault(p => p.Id == id);
 
-            if(product == null)
+            if (product == null)
             {
                 return NotFound();
             }
@@ -31,14 +32,11 @@ namespace EMA_Project.Controllers
             return Ok(product);
         }
 
-
         [HttpGet("GetAll")]
         public IActionResult GetProducts()
         {
             return Ok(DbRepository.Products.Select(p => new { p.Id, p.Name }));
         }
-
-
 
         [HttpGet("Restaurants/{id}")]
         public IActionResult GetRestaurantsOfProduct(int id)
