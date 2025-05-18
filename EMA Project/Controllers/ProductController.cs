@@ -32,7 +32,7 @@ namespace EMA_Project.Controllers
             return Ok(product);
         }
 
-        [HttpGet("GetProduct/{name:alpha}")]
+        [HttpGet("GetProduct/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
         public IActionResult GetProduct(string name)
         {
             Product? product = DbRepository.Products.FirstOrDefault(p => p.Name == name);
@@ -63,7 +63,7 @@ namespace EMA_Project.Controllers
             return Ok(product.Restaurants);
         }
 
-        [HttpGet("Restaurants/{name:alpha}")]
+        [HttpGet("Restaurants/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
         public IActionResult GetRestaurantsOfProductByName(string name)
         {
             Product? product = DbRepository.Products.FirstOrDefault(p => p.Name == name);
