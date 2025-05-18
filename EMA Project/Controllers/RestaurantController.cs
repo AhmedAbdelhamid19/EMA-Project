@@ -7,6 +7,7 @@ namespace EMA_Project.Controllers
     [ApiController]
     public class RestaurantController : ControllerBase
     {
+        private readonly DbRepository dbRepository = new DbRepository();
         [HttpPost("Add")]
         public IActionResult AddRestaurant([FromBody] Restaurant restaurant)
         {

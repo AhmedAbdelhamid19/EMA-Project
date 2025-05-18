@@ -8,6 +8,7 @@ namespace EMA_Project.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private readonly DbRepository dbRepository = new DbRepository();
         [HttpPost("signup")]
         public IActionResult SignUp([FromBody] SignUpModel model)
         {
