@@ -1,5 +1,7 @@
 ﻿using EMA_Project.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
+using static System.Math;
 
 namespace EMA_Project.Controllers
 {
@@ -18,6 +20,8 @@ namespace EMA_Project.Controllers
         }
 
 
+
+
         [HttpGet("GetRestaurant/{id:int}")]
         public IActionResult GetRestaurant(int id)
         {
@@ -29,6 +33,10 @@ namespace EMA_Project.Controllers
 
             return Ok(restaurant);
         }
+
+
+
+
 
         [HttpGet("GetRestaurantByName/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
         public IActionResult GetAction(string name)
@@ -43,6 +51,9 @@ namespace EMA_Project.Controllers
         }
 
 
+
+
+
         [HttpGet("GetAll")]
         public IActionResult GetRestaurants()
         {
@@ -50,11 +61,7 @@ namespace EMA_Project.Controllers
         }
 
 
-        [HttpGet("check/{password}/{email}")]
-        public IActionResult check([FromRoute]LoginModel login)
-        {
-            return Ok("Ok");
-        }
+
 
         [HttpGet("Products/{id:int}")]
         public IActionResult GetProductsOfRestaurant(int id)
@@ -68,7 +75,11 @@ namespace EMA_Project.Controllers
             return Ok(restaurant.Products);
         }
 
-        [HttpGet("Products/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
+
+
+
+
+        [HttpGet("ProductsByRestaurantName/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
         public IActionResult GetProductsOfRestaurant(string name)
         {
             Restaurant? restaurant = DbRepository.Restaurants.FirstOrDefault(r => r.Name == name);
@@ -79,6 +90,8 @@ namespace EMA_Project.Controllers
 
             return Ok(restaurant.Products);
         }
+
+
 
 
 
@@ -119,5 +132,61 @@ namespace EMA_Project.Controllers
 
             return Ok("product add to restaurant successfully");
         }
+
+
+
+
+
+        [HttpGet("CalcDistanceByRestaurantId/{latitude}/{longitude}/{RestaurantId:int}")]
+        public IActionResult CalcDistancdById(int latitude, int longitude, int RestaurantId)
+        {
+            Restaurant? restaurant = DbRepository.Restaurants.FirstOrDefault(r => r.Id == RestaurantId);
+            if (restaurant == null)
+            {
+                return NotFound();
+            }
+
+
+            double Distance = GetDistanceInKm(latitude, longitude, restaurant.latitude, restaurant.longtude);
+            return Ok(new { Distance = Distance });
+        }
+
+
+
+        [HttpGet("CalcDistanceByRestaurantName/{latitude}/{longitude}/{RestaurantName}")]
+        public IActionResult CalcDistancdByName(int latitude, int longitude, string RestaurantName)
+        {
+            Restaurant? restaurant = DbRepository.Restaurants.FirstOrDefault(r => r.Name == RestaurantName);
+            if (restaurant == null)
+            {
+                return NotFound();
+            }
+
+            double Distance = GetDistanceInKm(latitude, longitude, restaurant.latitude, restaurant.longtude);
+            return Ok(new { Distance = Distance });
+        }
+
+
+        public static double GetDistanceInKm(double lat1, double lon1, double lat2, double lon2)
+        {
+            const double R = 6371; // Earth's radius in kilometers
+
+            double dLat = DegreesToRadians(lat2 - lat1);
+            double dLon = DegreesToRadians(lon2 - lon1);
+
+            double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+                       Math.Cos(DegreesToRadians(lat1)) * Math.Cos(DegreesToRadians(lat2)) *
+                       Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
+            return R * c;
+        }
+        private static double DegreesToRadians(double degrees)
+        {
+            return degrees * (Math.PI / 180);
+        }
     }
+
+
 }

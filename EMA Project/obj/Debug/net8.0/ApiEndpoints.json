@@ -134,7 +134,7 @@
   {
     "ContainingType": "EMA_Project.Controllers.ProductController",
     "Method": "GetRestaurantsOfProductByName",
-    "RelativePath": "api/Product/Restaurants/{name}",
+    "RelativePath": "api/Product/RestaurantsByProductName/{name}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -186,19 +186,50 @@
   },
   {
     "ContainingType": "EMA_Project.Controllers.RestaurantController",
-    "Method": "check",
-    "RelativePath": "api/Restaurant/check/{password}/{email}",
+    "Method": "CalcDistancdById",
+    "RelativePath": "api/Restaurant/CalcDistanceByRestaurantId/{latitude}/{longitude}/{RestaurantId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Email",
-        "Type": "System.String",
+        "Name": "latitude",
+        "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "Password",
+        "Name": "longitude",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "RestaurantId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.RestaurantController",
+    "Method": "CalcDistancdByName",
+    "RelativePath": "api/Restaurant/CalcDistanceByRestaurantName/{latitude}/{longitude}/{RestaurantName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "latitude",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "longitude",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "RestaurantName",
         "Type": "System.String",
         "IsRequired": true
       }
@@ -266,7 +297,7 @@
   {
     "ContainingType": "EMA_Project.Controllers.RestaurantController",
     "Method": "GetProductsOfRestaurant",
-    "RelativePath": "api/Restaurant/Products/{name}",
+    "RelativePath": "api/Restaurant/ProductsByRestaurantName/{name}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

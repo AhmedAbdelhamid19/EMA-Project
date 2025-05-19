@@ -19,6 +19,9 @@ namespace EMA_Project.Controllers
             return CreatedAtAction("GetProduct", new { id = product.Id }, product);
         }
 
+
+
+
         [HttpGet("GetProduct/{id:int}")]
         public IActionResult GetProduct(int id)
         {
@@ -31,6 +34,9 @@ namespace EMA_Project.Controllers
 
             return Ok(product);
         }
+
+
+
 
         [HttpGet("GetProductByName/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
         public IActionResult GetProduct(string name)
@@ -45,11 +51,17 @@ namespace EMA_Project.Controllers
             return Ok(product);
         }
 
+
+
+
         [HttpGet("GetAll")]
         public IActionResult GetProducts()
         {
             return Ok(DbRepository.Products.Select(p => new { p.Id, p.Name }));
         }
+
+
+
 
         [HttpGet("Restaurants/{id:int}")]
         public IActionResult GetRestaurantsOfProduct(int id)
@@ -63,7 +75,10 @@ namespace EMA_Project.Controllers
             return Ok(product.Restaurants);
         }
 
-        [HttpGet("Restaurants/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
+
+
+
+        [HttpGet("RestaurantsByProductName/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
         public IActionResult GetRestaurantsOfProductByName(string name)
         {
             Product? product = DbRepository.Products.FirstOrDefault(p => p.Name == name);

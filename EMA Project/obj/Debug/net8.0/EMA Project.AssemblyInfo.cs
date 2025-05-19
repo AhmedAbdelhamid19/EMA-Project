@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMA Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+832b2344fa5c44766cbf12fcb9a15d12f2c73c40")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+941282db61d33b1100c725c4c796c3098c9aa1af")]
 [assembly: System.Reflection.AssemblyProductAttribute("EMA Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMA Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

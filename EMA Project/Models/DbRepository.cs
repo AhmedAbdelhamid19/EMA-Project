@@ -24,56 +24,30 @@
                 Rule = "Admin"
             });
 
-            Restaurants.Add(new Restaurant { Id = 1, Name = "Bazooka" });
-            Restaurants.Add(new Restaurant { Id = 2, Name = "Buffalo" });
-            Restaurants.Add(new Restaurant { Id = 3, Name = "Heart Attack" });
-            Restaurants.Add(new Restaurant { Id = 4, Name = "El Tahre" });
-            Restaurants.Add(new Restaurant { Id = 5, Name = "Belabn" });
-            Restaurants.Add(new Restaurant { Id = 6, Name = "Gad" });
-            Restaurants.Add(new Restaurant { Id = 7, Name = "Hardees" });
-            Restaurants.Add(new Restaurant { Id = 8, Name = "El-Abd" });
-            Restaurants.Add(new Restaurant { Id = 9, Name = "Etwal" });
+            Restaurants.Add(new Restaurant { Id = 1, Name = "Bazooka", latitude = 30.0444, longtude = 31.2357 });
+            Restaurants.Add(new Restaurant { Id = 2, Name = "Buffalo", latitude = 30.0450, longtude = 31.2500 });
+            Restaurants.Add(new Restaurant { Id = 3, Name = "Heart Attack", latitude = 30.0500, longtude = 31.2700 });
+            Restaurants.Add(new Restaurant { Id = 4, Name = "El Tahre", latitude = 30.0550, longtude = 31.2800 });
             
-            Products.Add(new Product { Id = 1, Name = "Roz Blabn", Price = 20.0m}); 
-            Products.Add(new Product { Id = 2, Name = "burger", Price = 300.0m }); 
-            Products.Add(new Product { Id = 3, Name = "rice", Price = 10.0m }); 
-            Products.Add(new Product { Id = 4, Name = "salad", Price = 5.0m }); 
-            Products.Add(new Product { Id = 5, Name = "Koshari", Price = 5.0m });
-            Products.Add(new Product { Id = 6, Name = "El Mesa5sa5a", Price = 5.0m });
-            Products.Add(new Product { Id = 7, Name = "Macarona", Price = 5.0m });
-            Products.Add(new Product { Id = 8, Name = "Pizza", Price = 5.0m });
-            Products.Add(new Product { Id = 9, Name = "Shawerma La7ma", Price = 5.0m });
-            Products.Add(new Product { Id = 10, Name = "Shawerma Fera5", Price = 5.0m });
+            Products.Add(new Product { Id = 1, Name = "burger", Price = 300.0m }); 
+            Products.Add(new Product { Id = 2, Name = "rice", Price = 10.0m }); 
+            Products.Add(new Product { Id = 3, Name = "Macarona", Price = 5.0m });
+            Products.Add(new Product { Id = 4, Name = "Pizza", Price = 5.0m });
+            Products.Add(new Product { Id = 5, Name = "Shawerma La7ma", Price = 5.0m });
+            Products.Add(new Product { Id = 6, Name = "Shawerma Fera5", Price = 5.0m });
 
-            for(int i = 0; i < 5; i++)
+            for(int i = 0; i < Products.Count; i++)
             {
                 Product p = new Product { Id = Products[i].Id, Name = Products[i].Name, Price = Products[i].Price };
-                for (int j=0; j<5; j++)
+                for (int j=0; j<Restaurants.Count; j++)
                 {
                     Restaurants[j]?.Products?.Add(p);
                 }
             }
-            for (int i = 5; i < Products.Count; i++)
-            {
-                Product p = new Product { Id = Products[i].Id, Name = Products[i].Name, Price = Products[i].Price };
-                for (int j = 5; j < Restaurants.Count; j++)
-                {
-                    Restaurants[j]?.Products?.Add(p);
-                }
-            }
-
-            for(int i=0; i<5; i++)
+            for (int i = 0; i < Restaurants.Count; i++)
             {
                 Restaurant r = new Restaurant { Id = Restaurants[i].Id, Name = Restaurants[i].Name };
-                for(int j=0; j<5; j++)
-                {
-                    Products[j]?.Restaurants?.Add(r);
-                }
-            }
-            for(int i=5; i< Restaurants.Count; i++)
-            {
-                Restaurant r = new Restaurant { Id = Restaurants[i].Id, Name = Restaurants[i].Name };
-                for (int j = 5; j < Products.Count; j++)
+                for (int j = 0; j < Products.Count; j++)
                 {
                     Products[j]?.Restaurants?.Add(r);
                 }
