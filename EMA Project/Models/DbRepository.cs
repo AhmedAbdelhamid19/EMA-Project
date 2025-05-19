@@ -46,7 +46,12 @@
             }
             for (int i = 0; i < Restaurants.Count; i++)
             {
-                Restaurant r = new Restaurant { Id = Restaurants[i].Id, Name = Restaurants[i].Name };
+                Restaurant r = new Restaurant { 
+                    Id = Restaurants[i].Id, 
+                    Name = Restaurants[i].Name, 
+                    latitude = Restaurants[i].latitude, 
+                    longtude = Restaurants[i].longtude 
+                };
                 for (int j = 0; j < Products.Count; j++)
                 {
                     Products[j]?.Restaurants?.Add(r);
