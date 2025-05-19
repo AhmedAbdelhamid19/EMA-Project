@@ -102,7 +102,7 @@
   {
     "ContainingType": "EMA_Project.Controllers.ProductController",
     "Method": "GetProduct",
-    "RelativePath": "api/Product/GetProduct/{name}",
+    "RelativePath": "api/Product/GetProductByName/{name}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -234,7 +234,7 @@
   {
     "ContainingType": "EMA_Project.Controllers.RestaurantController",
     "Method": "GetAction",
-    "RelativePath": "api/Restaurant/GetRestaurant/{name}",
+    "RelativePath": "api/Restaurant/GetRestaurantByName/{name}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

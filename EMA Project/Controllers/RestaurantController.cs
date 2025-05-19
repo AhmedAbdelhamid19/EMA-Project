@@ -30,7 +30,7 @@ namespace EMA_Project.Controllers
             return Ok(restaurant);
         }
 
-        [HttpGet("GetRestaurant/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
+        [HttpGet("GetRestaurantByName/{name:regex(^[[a-zA-Z0-9\\s]]+$)}")]
         public IActionResult GetAction(string name)
         {
             Restaurant? restaurant = DbRepository.Restaurants.FirstOrDefault(r => r.Name == name);
