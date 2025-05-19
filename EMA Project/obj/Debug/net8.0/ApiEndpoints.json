@@ -148,6 +148,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EMA_Project.Controllers.ProductController",
+    "Method": "GetRestaurantsOfProductByNameWithDistance",
+    "RelativePath": "api/Product/RestaurantsByProductNameWithDistance/{name}/{latitude}/{longitude}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "latitude",
+        "Type": "System.Double",
+        "IsRequired": true
+      },
+      {
+        "Name": "longitude",
+        "Type": "System.Double",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMA_Project.Controllers.ProductController",
+    "Method": "GetRestaurantsOfProductWithDistance",
+    "RelativePath": "api/Product/RestaurantsWithDistance/{id}/{latitude}/{longitude}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "latitude",
+        "Type": "System.Double",
+        "IsRequired": true
+      },
+      {
+        "Name": "longitude",
+        "Type": "System.Double",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EMA_Project.Controllers.RestaurantController",
     "Method": "AddRestaurant",
     "RelativePath": "api/Restaurant/Add",
