@@ -57,7 +57,7 @@ namespace EMA_Project.Controllers
         [HttpGet("GetAll")]
         public IActionResult GetRestaurants()
         {
-            return Ok(DbRepository.Restaurants.Select(r => new { r.Id, r.Name }));
+            return Ok(DbRepository.Restaurants.Select( r => new { r.Id, r.Name, r.latitude, r.longtude }));
         }
 
 
